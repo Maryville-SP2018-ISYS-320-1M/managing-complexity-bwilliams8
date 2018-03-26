@@ -2,38 +2,38 @@
 
 /*
 	ISYS 320
-	Name(s):
-	Date: 
+	Name(s):Brian Williams
+	Date: 3/25/2018
 */
 
 public class P5_ScalableBox {
 
 	public static void main(String[] args) {
-		drawBoxCap();
-		drawBoxInsides();
-		drawBoxCap();
+		drawBoxCap(7);
+		drawBoxInsides(7, 3);
+		drawBoxCap(7);
 	}
 	
-	public static void drawBoxCap() {
+	public static void drawBoxCap(int width) {
 		System.out.print("+");
 		
-		for( int capDashIndex = 1; capDashIndex <= 8 - 2; capDashIndex++ ) {
+		for( int capDashIndex = 1; capDashIndex <= width; capDashIndex++ ) {
 			System.out.print("-");
 		}
 		
 		System.out.println("+");
 	}
 	
-	public static void drawBoxInsides() {
-		for( int insideRowIndex = 1; insideRowIndex <= 10 - 2; insideRowIndex++ ) {
-			drawBoxInsideLine();
+	public static void drawBoxInsides(int width, int length) {
+		for( int insideRowIndex = 1; insideRowIndex <= length; insideRowIndex++ ) {
+			drawBoxInsideLine(width);
 		}
 	}
 	
-	public static void drawBoxInsideLine() {
+	public static void drawBoxInsideLine(int width) {
 		System.out.print("|");
 		
-		for( int insideRowIndex = 1; insideRowIndex <= 8 - 2; insideRowIndex++ ) {
+		for( int insideRowIndex = 1; insideRowIndex <= width; insideRowIndex++ ) {
 			System.out.print(".");
 		}
 		
